@@ -1,0 +1,49 @@
+<meta>
+	<info author="Om" name="Group System" version="v0.5.0 [Unstable]" startup="true" />
+	<script src="client.lua" type="client" />
+	<script src="server.lua" type="server" />
+
+	<!-- Group Custom Ranks -->
+	<script src="features/ranks/client.lua" type="client" />
+	<script src="features/ranks/server.lua" type="server" />
+
+	<!-- Change Group Color -->
+	<script src="features/color/client.lua" type="client" />
+	<script src="features/color/server.lua" type="server" />
+
+	<!-- Change Group Info -->
+	<script src="features/info/client.lua" type="client" />
+	<script src="features/info/server.lua" type="server" />
+
+	<!-- Change Group History -->
+	<script src="features/history/client.lua" type="client" />
+	<script src="features/history/server.lua" type="server" />
+
+	<!-- Warn Group Members -->
+	<script src="features/warn/client.lua" type="client" />
+	<script src="features/warn/server.lua" type="server" />
+
+	<export function="isPlayerInGroup" type="server" />
+	<export function="doesGroupExist" type="server" />
+	<export function="getPlayerGroupID" type="server" />
+	<export function="getGroupID" type="server" />
+	<export function="getRankNameFromID" type="server" />
+	<export function="getPlayerGroupInfo" type="server" />
+	<export function="getGroupMembers" type="server" />
+	<export function="getGroupRanks" type="server" />
+	<export function="getPlayerRank" type="server" />
+	<export function="getPlayerPermission" type="server" />
+	<export function="doesPlayerHavePermission" type="server" />
+	<export function="getGroupFounder" type="server" />
+	<export function="getRankIDFromName" type="server" />
+	<export function="getRankPermissions" type="server" />
+	<export function="getOnlinePlayersInGroup" type="server" />
+	<export function="outputGroupChat" type="server" />
+	<export function="getPlayerGroupName" type="server" />
+	<export function="insertGroupLog" type="server" />
+	<export function="getRankTotalPermissions" type="server" />
+	<export function="getGroupList" type="server" />
+	<export function="getPermissionTable" type="server" />
+	<export function="getAccountWarning" type="server" />
+	<export function="getGroupMemberRank" type="server" />
+</meta>

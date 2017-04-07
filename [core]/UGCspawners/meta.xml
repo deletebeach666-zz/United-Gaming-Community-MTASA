@@ -1,0 +1,6 @@
+<meta>
+<info author="Om" name="Vehicle Spawners" description="Vehicle Spawers" version="v0.5.0 [Unstable]" autostart="true" />
+<script src="client.lua" type="client" />
+<script src="server.lua" type="server" />
+<export function="getVehicleOwner" type="shared" />
+</meta>

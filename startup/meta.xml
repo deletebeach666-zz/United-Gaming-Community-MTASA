@@ -1,0 +1,5 @@
+<meta>
+	<info author="RipeMangoes69" version="1.0.0" name="Server Starting Script" />
+	<script src="server.lua" type="server" />
+	<script src="compile.lua" type="server" />
+</meta>

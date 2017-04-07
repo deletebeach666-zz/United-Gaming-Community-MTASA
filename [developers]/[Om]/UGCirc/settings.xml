@@ -1,0 +1,10 @@
+﻿<settings>
+		<server
+			host="irc.multitheftauto.com"
+			nick="Peacock"
+			channels="#ugcrpg kerwispro"
+			port="6667"
+			secure="false"
+			nickservpass="kerwisfag"
+		/>
+</settings>

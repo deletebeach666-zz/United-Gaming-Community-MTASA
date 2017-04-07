@@ -1,0 +1,10 @@
+<meta>
+	
+	<oop>true</oop>
+
+    <file src="img/locked.png" />
+    <file src="img/unlocked.png" />
+    <file src="img/nosemp.png" />
+    <file src="img/nosful.png" />
+    <script src="client.lua" type="client"  />
+</meta>

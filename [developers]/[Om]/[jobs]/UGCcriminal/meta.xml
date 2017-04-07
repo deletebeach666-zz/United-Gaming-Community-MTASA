@@ -1,0 +1,6 @@
+<meta>
+<info author="Om" name="Criminal Job" autostart="true" />
+<script src="server.lua" type="server" />
+<script src="crime.lua" type="server" />
+<export function="givePlayerWL" type="server" />
+</meta>

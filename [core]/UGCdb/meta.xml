@@ -1,0 +1,6 @@
+<meta>
+<info author="Om" name="UGC:MySQL Database" version="1.0" />
+<script src="server.lua" type="server" />
+<export function="getConnection" type="server" />
+<export function="exec" type="server" />
+</meta>

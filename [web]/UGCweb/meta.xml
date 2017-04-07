@@ -1,0 +1,6 @@
+<meta>
+<info author="Om" name="Web" description="Web" version="v1" autostart="true" />
+<script src="server.lua" type="server" />
+<export function="getServerScoreboard" type="server" http="true" />
+<export function="getPlayerData" type="server" http="true" />
+</meta>

@@ -1,0 +1,10 @@
+<meta>
+
+	<info author="Swagy" startup="true"/>
+	<script src="vehicleshop_c.lua" type="client"/>
+	<script src="vehicleshop_s.lua" type="server"/>
+	<script src="management.lua" type="client"/>
+	<export function="isVehicleOwned" type="server"/>
+	<export function="getVehicleOwner" type="server"/>
+
+</meta>	

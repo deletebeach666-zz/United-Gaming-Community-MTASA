@@ -1,0 +1,15 @@
+<meta>
+<info author="Om" description="Chat System" version="v0.5.0 [Unstable]" startup="true" />
+<script src="server.lua" type="server" />
+<script src="client.lua" type="client" />
+<export function="outputMainChat" type="server" http="true" />
+<export function="outputMainChat" type="client" />
+<export function="getPlayerZone" type="shared" http="true" />
+</meta>
+
+<!-- Resource Events: -->
+<!-->
+Server Sided:
+onPlayerMainChat(message, chatZone) -- When player talks on global chat, the event is triggered
+onPlayerTeamChat(theTeam, message) -- When player talks on team chat, the event is triggered
+-->

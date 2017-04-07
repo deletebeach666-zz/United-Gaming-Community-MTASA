@@ -1,0 +1,10 @@
+<meta>
+<info author="Om" name="DX Library" description="UGC:RPG DX Library" version="v0.5.0 [Unstable]" startup="true" />
+	<script src="draw.lua" type="client" />
+	<script src="progress.lua" type="client" />
+	<script src="server.lua" type="server" />
+
+	<export function="destroyProgressBar" type="client" />
+	<export function="createTextOnElement" type="client" />
+	<export function="drawProgressBar" type="shared"/>
+</meta>

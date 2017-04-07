@@ -1,0 +1,57 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a relative image filepath. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move images into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+GUIEditor = {
+    tab = {},
+    staticimage = {},
+    tabpanel = {},
+    edit = {},
+    button = {},
+    window = {},
+    label = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(347, 201, 640, 297, "UGC:RPG - Bank", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.staticimage[1] = guiCreateStaticImage(9, 27, 617, 98, ":UGCbanking/img/bank.png", false, GUIEditor.window[1])
+        GUIEditor.tabpanel[1] = guiCreateTabPanel(9, 159, 292, 131, false, GUIEditor.window[1])
+
+        GUIEditor.tab[1] = guiCreateTab("Deposit", GUIEditor.tabpanel[1])
+
+        GUIEditor.label[1] = guiCreateLabel(8, 13, 54, 15, "Amount:", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.edit[1] = guiCreateEdit(8, 31, 274, 32, "", false, GUIEditor.tab[1])
+        GUIEditor.button[1] = guiCreateButton(6, 72, 276, 26, "Deposit", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.button[1], "default-bold-small")
+        guiSetProperty(GUIEditor.button[1], "NormalTextColour", "FFAAAAAA")
+
+        GUIEditor.tab[2] = guiCreateTab("Withdraw", GUIEditor.tabpanel[1])
+
+        GUIEditor.label[2] = guiCreateLabel(8, 131, 618, 18, "Account Balance: $0", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[2], "center", false)
+        GUIEditor.label[3] = guiCreateLabel(322, 169, 98, 15, "Transfer Money:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        guiLabelSetVerticalAlign(GUIEditor.label[3], "bottom")
+        GUIEditor.edit[2] = guiCreateEdit(420, 169, 77, 20, "", false, GUIEditor.window[1])
+        GUIEditor.button[2] = guiCreateButton(575, 169, 51, 20, ">", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.button[2], "default-bold-small")
+        guiSetProperty(GUIEditor.button[2], "NormalTextColour", "FFAAAAAA")
+        GUIEditor.edit[3] = guiCreateEdit(497, 169, 75, 20, "", false, GUIEditor.window[1])
+        GUIEditor.label[4] = guiCreateLabel(420, 154, 152, 15, "Amount           To", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[4], "default-bold-small")
+        GUIEditor.label[5] = guiCreateLabel(317, 199, 98, 15, "Transaction Logs:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[5], "default-bold-small")
+        guiLabelSetVerticalAlign(GUIEditor.label[5], "bottom")
+        GUIEditor.button[3] = guiCreateButton(420, 197, 206, 21, "Open", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.button[3], "default-bold-small")
+        guiSetProperty(GUIEditor.button[3], "NormalTextColour", "FFAAAAAA")    
+    end
+)

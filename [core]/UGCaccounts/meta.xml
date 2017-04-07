@@ -1,0 +1,11 @@
+<meta>
+	<info author="Om" version="1.0.0" name="UGC Accounts" startup="true" />
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+	<script src="data.lua" type="server" />
+	
+	<export function="getPlayerData" type="server" />
+	<export function="getData" type="server" />
+	<export function="setData" type="server" />
+	<export function="getPlayerID" type="server" />
+</meta>

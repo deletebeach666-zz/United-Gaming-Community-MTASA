@@ -1,0 +1,4 @@
+<meta>
+<info author="Om" name="UGC: Interaction Menu" autostart="true" />
+<script src="client.lua" type="client" />
+</meta>

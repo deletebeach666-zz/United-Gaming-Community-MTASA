@@ -1,0 +1,6 @@
+<meta>
+
+	<info author="Swagy" autostart="false"/>
+	<script src="server.lua" type="server"/>
+
+</meta>	

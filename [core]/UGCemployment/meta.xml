@@ -1,0 +1,18 @@
+<meta>
+	<info author="Om" name="UGC:RPG Employment Core" autostart="true"/>
+	<script src="server.lua" type="server" />
+	<script src="client.lua" type="client" />
+
+	<!-- Rank/Info Tables -->
+	<script src="tables.lua" type="server" />
+
+	<!-- Exports -->
+	<export function="doesPlayerHaveJob" type="server" />
+	<export function="getPlayerJobRank" type="server" />
+	<export function="givePlayerProgress" type="server" />
+	<export function="doesJobExist" type="server" />
+	<export function="givePlayerJobMoney" type="server" />
+	<export function="getPlayerJobPayment" type="server" />
+	<export function="getPlayerProgress" type="server" />
+	<export function="getPlayerTotalEarnedMoney" type="server" />
+</meta>

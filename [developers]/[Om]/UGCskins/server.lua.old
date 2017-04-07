@@ -1,0 +1,23 @@
+-------------------------------->
+-- UGC: United Gaming Community
+-- Author: Om Bhende (RipeMangoe69)
+-- Date: 13 March 2017
+-- Script: UGCskins/server.lua
+-- Type: Server Sided
+-------------------------------->
+
+addEvent("UGCskins.changeSkin", true)
+addEventHandler("UGCskins.changeSkin", resourceRoot, function(id, skinName)
+	if getElementModel(client) == id then return outputChatBox("[Skin Shop] #FFFFFFYou already have that skin!", client, 255, 0, 0, true) end
+	local account = getPlayerAccount(client)
+	exports.UGCaccounts:setData(account, "skin.owned", id)
+	takePlayerMoney(client, 500)
+	setElementModel(client, id)
+	outputChatBox("[Skin Shop] #FFFFFFYou have bought " .. skinName .. " for $500!", client, 0, 255, 0, true) 
+end)
+
+function getPlayerSkin(player)
+	local acc = getPlayerAccount(player)
+	if isGuestAccount(acc) then return false end
+	return exports.UGCaccounts:getData(acc, "skin.owned")
+end

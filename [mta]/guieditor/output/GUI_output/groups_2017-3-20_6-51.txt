@@ -1,0 +1,81 @@
+
+GUIEditor = {
+    tab = {},
+    tabpanel = {},
+    label = {},
+    gridlist = {},
+    window = {},
+    button = {},
+    memo = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(401, 171, 592, 373, "United Gaming Community - Group System", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.tabpanel[1] = guiCreateTabPanel(9, 20, 569, 343, false, GUIEditor.window[1])
+
+        GUIEditor.tab[1] = guiCreateTab("Info", GUIEditor.tabpanel[1])
+
+        GUIEditor.label[1] = guiCreateLabel(8, 9, 76, 17, "Group Name:", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.label[2] = guiCreateLabel(8, 31, 82, 15, "Creation Date:", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.label[3] = guiCreateLabel(8, 52, 108, 15, "Group Information", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        GUIEditor.memo[1] = guiCreateMemo(6, 68, 546, 241, "", false, GUIEditor.tab[1])
+        guiMemoSetReadOnly(GUIEditor.memo[1], true)
+        GUIEditor.label[4] = guiCreateLabel(84, 10, 468, 16, "( ͡° ͜ʖ ͡°)", false, GUIEditor.tab[1])
+        GUIEditor.label[5] = guiCreateLabel(94, 31, 169, 15, "10 May 2017", false, GUIEditor.tab[1])
+
+        GUIEditor.tab[2] = guiCreateTab("Members", GUIEditor.tabpanel[1])
+
+        GUIEditor.gridlist[1] = guiCreateGridList(4, 20, 552, 269, false, GUIEditor.tab[2])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Player", 0.2)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Rank", 0.2)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Joined", 0.2)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Account Name", 0.2)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Warning", 0.2)
+        GUIEditor.label[6] = guiCreateLabel(10, 5, 60, 15, "Members", false, GUIEditor.tab[2])
+        guiSetFont(GUIEditor.label[6], "default-bold-small")
+        GUIEditor.button[1] = guiCreateButton(4, 291, 138, 19, "Warn Player", false, GUIEditor.tab[2])
+        guiSetFont(GUIEditor.button[1], "default-small")
+        guiSetProperty(GUIEditor.button[1], "NormalTextColour", "FFAAAAAA")
+        GUIEditor.button[2] = guiCreateButton(142, 291, 140, 19, "Change Rank", false, GUIEditor.tab[2])
+        guiSetFont(GUIEditor.button[2], "default-small")
+        guiSetProperty(GUIEditor.button[2], "NormalTextColour", "FFAAAAAA")
+        GUIEditor.button[3] = guiCreateButton(282, 291, 140, 19, "Kick Player", false, GUIEditor.tab[2])
+        guiSetFont(GUIEditor.button[3], "default-small")
+        guiSetProperty(GUIEditor.button[3], "NormalTextColour", "FFAAAAAA")
+        GUIEditor.button[4] = guiCreateButton(422, 291, 134, 19, "Invite Player", false, GUIEditor.tab[2])
+        guiSetFont(GUIEditor.button[4], "default-small")
+        guiSetProperty(GUIEditor.button[4], "NormalTextColour", "FFAAAAAA")
+
+        GUIEditor.tab[3] = guiCreateTab("Administration", GUIEditor.tabpanel[1])
+
+        GUIEditor.button[5] = guiCreateButton(7, 5, 118, 30, "Group Color", false, GUIEditor.tab[3])
+        guiSetFont(GUIEditor.button[5], "default-bold-small")
+        guiSetProperty(GUIEditor.button[5], "NormalTextColour", "FFAAAAAA")
+        GUIEditor.label[7] = guiCreateLabel(135, 3, 432, 32, "Change your group color anywhere, anytime! Click on \"Group Color\" and set group color RGB", false, GUIEditor.tab[3])
+        guiSetFont(GUIEditor.label[7], "clear-normal")
+        guiLabelSetHorizontalAlign(GUIEditor.label[7], "left", true)
+        GUIEditor.button[6] = guiCreateButton(6, 47, 118, 30, "Group Ranks", false, GUIEditor.tab[3])
+        guiSetFont(GUIEditor.button[6], "default-bold-small")
+        guiSetProperty(GUIEditor.button[6], "NormalTextColour", "FFAAAAAA")
+        GUIEditor.label[8] = guiCreateLabel(135, 45, 432, 32, "Setup your group ranks by yourself! You can create custom rank with custom permissions aswell!", false, GUIEditor.tab[3])
+        guiSetFont(GUIEditor.label[8], "clear-normal")
+        guiLabelSetHorizontalAlign(GUIEditor.label[8], "left", true)
+        GUIEditor.button[7] = guiCreateButton(6, 92, 118, 30, "Group Info", false, GUIEditor.tab[3])
+        guiSetFont(GUIEditor.button[7], "default-bold-small")
+        guiSetProperty(GUIEditor.button[7], "NormalTextColour", "FFAAAAAA")
+        GUIEditor.label[9] = guiCreateLabel(135, 90, 432, 32, "Edit your group information and add important things such as rules, etc", false, GUIEditor.tab[3])
+        guiSetFont(GUIEditor.label[9], "clear-normal")
+        guiLabelSetHorizontalAlign(GUIEditor.label[9], "left", true)
+        GUIEditor.button[8] = guiCreateButton(6, 136, 118, 30, "Group Name", false, GUIEditor.tab[3])
+        guiSetFont(GUIEditor.button[8], "default-bold-small")
+        guiSetProperty(GUIEditor.button[8], "NormalTextColour", "FFAAAAAA")
+        GUIEditor.label[10] = guiCreateLabel(134, 134, 432, 32, "Have to change group name? Click on Group Name Button to change your group name!", false, GUIEditor.tab[3])
+        guiSetFont(GUIEditor.label[10], "clear-normal")
+        guiLabelSetHorizontalAlign(GUIEditor.label[10], "left", true)    
+    end
+)

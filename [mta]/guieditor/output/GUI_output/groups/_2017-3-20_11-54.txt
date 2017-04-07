@@ -1,0 +1,59 @@
+
+GUIEditor = {
+    checkbox = {},
+    edit = {},
+    button = {},
+    window = {},
+    label = {},
+    gridlist = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(591, 229, 197, 296, "Ranks", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.gridlist[1] = guiCreateGridList(9, 25, 178, 235, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Names", 0.9)
+        GUIEditor.button[1] = guiCreateButton(100, 265, 87, 24, "Create", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.button[1], "default-bold-small")
+        guiSetProperty(GUIEditor.button[1], "NormalTextColour", "FFAAAAAA")
+        GUIEditor.button[2] = guiCreateButton(9, 265, 91, 24, "Close", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.button[2], "default-bold-small")
+        guiSetProperty(GUIEditor.button[2], "NormalTextColour", "FFAAAAAA")
+
+
+        GUIEditor.window[2] = guiCreateWindow(326, 229, 223, 234, "Rank Permissions", false)
+        guiWindowSetSizable(GUIEditor.window[2], false)
+
+        GUIEditor.checkbox[1] = guiCreateCheckBox(9, 51, 191, 15, "Invite other Players", false, false, GUIEditor.window[2])
+        GUIEditor.checkbox[2] = guiCreateCheckBox(9, 71, 191, 15, "Kick other members", false, false, GUIEditor.window[2])
+        GUIEditor.checkbox[3] = guiCreateCheckBox(9, 91, 191, 15, "Warn group members", false, false, GUIEditor.window[2])
+        GUIEditor.checkbox[4] = guiCreateCheckBox(9, 111, 191, 15, "Change group color", false, false, GUIEditor.window[2])
+        GUIEditor.checkbox[5] = guiCreateCheckBox(9, 131, 191, 15, "Change/Edit/Add Group Ranks", false, false, GUIEditor.window[2])
+        GUIEditor.checkbox[6] = guiCreateCheckBox(9, 151, 191, 15, "Change Group Information", false, false, GUIEditor.window[2])
+        GUIEditor.checkbox[7] = guiCreateCheckBox(9, 172, 191, 15, "Change Group Name", false, false, GUIEditor.window[2])
+        GUIEditor.button[3] = guiCreateButton(10, 193, 104, 23, "Cancel", false, GUIEditor.window[2])
+        guiSetFont(GUIEditor.button[3], "default-bold-small")
+        guiSetProperty(GUIEditor.button[3], "NormalTextColour", "FFAAAAAA")
+        GUIEditor.button[4] = guiCreateButton(114, 193, 99, 23, "Save", false, GUIEditor.window[2])
+        guiSetFont(GUIEditor.button[4], "default-bold-small")
+        guiSetProperty(GUIEditor.button[4], "NormalTextColour", "FFAAAAAA")
+        GUIEditor.label[1] = guiCreateLabel(10, 26, 68, 15, "Rank Name:", false, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.label[2] = guiCreateLabel(84, 26, 133, 15, "Founder Of Lenny", false, GUIEditor.window[2])
+
+
+        GUIEditor.window[3] = guiCreateWindow(808, 229, 244, 115, "Create Rank", false)
+        guiWindowSetSizable(GUIEditor.window[3], false)
+
+        GUIEditor.label[3] = guiCreateLabel(10, 26, 101, 15, "Create Rank", false, GUIEditor.window[3])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        GUIEditor.edit[1] = guiCreateEdit(10, 44, 223, 31, "", false, GUIEditor.window[3])
+        GUIEditor.button[5] = guiCreateButton(11, 80, 110, 24, "Cancel", false, GUIEditor.window[3])
+        guiSetFont(GUIEditor.button[5], "default-bold-small")
+        guiSetProperty(GUIEditor.button[5], "NormalTextColour", "FFAAAAAA")
+        GUIEditor.button[6] = guiCreateButton(121, 80, 110, 24, "Create", false, GUIEditor.window[3])
+        guiSetFont(GUIEditor.button[6], "default-bold-small")
+        guiSetProperty(GUIEditor.button[6], "NormalTextColour", "FFAAAAAA")    
+    end
+)

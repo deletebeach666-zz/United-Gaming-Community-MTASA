@@ -1,0 +1,6 @@
+<meta>
+	<info author="Om" version="1.0.0" name="UGC Administration" startup="true" />
+	<script src="server.lua" type="server" />
+	<script src="client.lua" type="client" />
+	<export function="isAdmin" type="server" />
+</meta>

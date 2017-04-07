@@ -1,0 +1,16 @@
+<meta>
+	<info author="Om" version="1.0.0" name="UGC Utility Resource" startup="true" />
+	<script src="script.lua" type="shared" />
+	<script src="client.lua" type="client" />
+	<script src="server.lua" type="server" />
+	
+	<export function="striphex" type="shared" />
+	<export function="tohex" type="shared" />
+	<export function="formatNumber" type="shared" />
+	<export function="torgb" type="shared" />
+	<export function="centerWindow" type="client" />
+	<export function="formatMoney" type="client" />
+	<export function="tocomma" type="shared"/>
+	<export function="toclock" type="shared" />
+	<export function="generatePlate" type="shared" />
+</meta>

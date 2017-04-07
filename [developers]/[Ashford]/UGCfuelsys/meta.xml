@@ -1,0 +1,11 @@
+<meta>
+<info author="Ashford" name="UGC ~ Fuel System" type="script" description="?" />
+
+<oop>true</oop>
+
+<script src="client.lua" type="client" cache="false" />
+
+<script src="stuff.lua" type="client" />
+
+
+</meta>

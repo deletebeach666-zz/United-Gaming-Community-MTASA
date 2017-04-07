@@ -1,0 +1,34 @@
+
+GUIEditor = {
+    tab = {},
+    tabpanel = {},
+    edit = {},
+    button = {},
+    window = {},
+    label = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(543, 217, 290, 215, "UGC:RPG - Banking", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.label[1] = guiCreateLabel(8, 31, 274, 15, "Account Balance: $0", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[1], "center", false)
+        GUIEditor.tabpanel[1] = guiCreateTabPanel(10, 51, 271, 141, false, GUIEditor.window[1])
+
+        GUIEditor.tab[1] = guiCreateTab("Deposit", GUIEditor.tabpanel[1])
+
+        GUIEditor.label[2] = guiCreateLabel(12, 10, 51, 15, "Amount:", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.edit[1] = guiCreateEdit(10, 30, 250, 29, "", false, GUIEditor.tab[1])
+        GUIEditor.button[1] = guiCreateButton(10, 68, 250, 33, "Deposit", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.button[1], "default-bold-small")
+        guiSetProperty(GUIEditor.button[1], "NormalTextColour", "FFAAAAAA")
+
+        GUIEditor.tab[2] = guiCreateTab("Withdraw", GUIEditor.tabpanel[1])
+
+        GUIEditor.label[3] = guiCreateLabel(248, 192, 32, 15, "Close", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")    
+    end
+)

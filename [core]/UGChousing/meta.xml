@@ -1,0 +1,6 @@
+<meta>
+    <info author="Swagy" version="1.0.0" name="UGC Housing" startup="true" />
+    <script src="client.lua" type="client" />
+    <script src="server.lua" type="server" />
+    <file src="font.ttf" />
+</meta>

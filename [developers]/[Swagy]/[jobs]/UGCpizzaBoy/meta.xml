@@ -1,0 +1,9 @@
+<meta>
+
+	<info author="Swagy" autostart="true"/>
+	<script src="server.lua" type="server"/>
+	<script src="client.lua" type="client"/>
+	<file src="files/font.ttf"/>
+	<file src="img/pizza.png"/>
+
+</meta>

@@ -1,0 +1,10 @@
+<meta>
+<info author="Ashford" name="UGC Mechanic Job" type="script" description="?" />
+
+<oop>true</oop>
+
+<script src="server.lua" type="server" />
+<script src="client.lua" type="client" />
+
+
+</meta>

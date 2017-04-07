@@ -1,0 +1,8 @@
+<meta>
+	<info author="RipeMangoes69" version="1.0.0" name="UGC Notification" startup="true" />
+	<script src="client.lua" type="client" />
+	<script src="server.lua" type="server" />
+	<file src="font.ttf" />
+	<export function="sendNotification" type="client" />
+	<export function="sendNotification" type="server" />
+</meta>

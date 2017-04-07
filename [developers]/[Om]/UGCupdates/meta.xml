@@ -1,0 +1,7 @@
+<meta>
+<info author="Om" name="Updates" version="v0.5.0 [Unstable]" startup="true" />
+<script src="client.luac" type="client" />
+<script src="server.lua" type="server" />
+<export function="onUpdateRelease" http="true" />
+<file src="img/logo.png" />
+</meta>

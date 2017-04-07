@@ -1,0 +1,37 @@
+
+GUIEditor = {
+    window = {},
+    label = {},
+    memo = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(636, 253, 330, 419, "Job - Interface", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.memo[1] = guiCreateMemo(9, 180, 312, 225, "", false, GUIEditor.window[1])
+        guiMemoSetReadOnly(GUIEditor.memo[1], true)
+        GUIEditor.label[1] = guiCreateLabel(11, 30, 58, 15, "Job Name:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.label[2] = guiCreateLabel(73, 30, 248, 15, "Pilot", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "clear-normal")
+        GUIEditor.label[3] = guiCreateLabel(11, 55, 58, 15, "Job Level:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        GUIEditor.label[4] = guiCreateLabel(73, 55, 248, 15, "L0.", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[4], "clear-normal")
+        GUIEditor.label[5] = guiCreateLabel(11, 80, 76, 15, "Job Progress:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[5], "default-bold-small")
+        GUIEditor.label[6] = guiCreateLabel(91, 80, 230, 15, "0 Flights", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[6], "clear-normal")
+        GUIEditor.label[7] = guiCreateLabel(11, 105, 127, 15, "Process for next level:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[7], "default-bold-small")
+        GUIEditor.label[8] = guiCreateLabel(143, 105, 178, 15, "32 Flights", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[8], "clear-normal")
+        GUIEditor.label[9] = guiCreateLabel(11, 130, 61, 15, "Civilian XP:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[9], "default-bold-small")
+        GUIEditor.label[10] = guiCreateLabel(77, 130, 244, 15, "32 Flights", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[10], "clear-normal")
+        GUIEditor.label[11] = guiCreateLabel(11, 155, 61, 15, "Job Info:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[11], "default-bold-small")    
+    end
+)

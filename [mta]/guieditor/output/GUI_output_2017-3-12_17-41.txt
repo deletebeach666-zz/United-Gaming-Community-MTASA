@@ -1,0 +1,22 @@
+
+GUIEditor = {
+    tab = {},
+    tabpanel = {},
+    edit = {},
+    gridlist = {},
+    window = {}
+}
+GUIEditor.window[1] = guiCreateWindow(375, 123, 605, 519, "UGC:RPG - AdminCP", false)
+guiWindowSetSizable(GUIEditor.window[1], false)
+
+GUIEditor.tabpanel[1] = guiCreateTabPanel(9, 22, 586, 487, false, GUIEditor.window[1])
+
+GUIEditor.tab[1] = guiCreateTab("Administration", GUIEditor.tabpanel[1])
+
+GUIEditor.edit[1] = guiCreateEdit(4, 2, 169, 25, "", false, GUIEditor.tab[1])
+GUIEditor.gridlist[1] = guiCreateGridList(3, 29, 170, 423, false, GUIEditor.tab[1])
+guiGridListAddColumn(GUIEditor.gridlist[1], "Nickname", 0.9)
+
+GUIEditor.tab[2] = guiCreateTab("Resources", GUIEditor.tabpanel[1])
+GUIEditor.tab[3] = guiCreateTab("Bans", GUIEditor.tabpanel[1])
+GUIEditor.tab[4] = guiCreateTab("Server", GUIEditor.tabpanel[1])

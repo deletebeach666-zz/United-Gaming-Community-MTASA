@@ -1,0 +1,49 @@
+
+GUIEditor = {
+    tab = {},
+    tabpanel = {},
+    edit = {},
+    gridlist = {},
+    window = {},
+    label = {}
+}
+GUIEditor.window[1] = guiCreateWindow(375, 123, 600, 460, "UGC:RPG - AdminCP", false)
+guiWindowSetSizable(GUIEditor.window[1], false)
+
+GUIEditor.tabpanel[1] = guiCreateTabPanel(9, 22, 581, 432, false, GUIEditor.window[1])
+
+GUIEditor.tab[1] = guiCreateTab("Administration", GUIEditor.tabpanel[1])
+
+GUIEditor.edit[1] = guiCreateEdit(4, 2, 169, 25, "", false, GUIEditor.tab[1])
+GUIEditor.gridlist[1] = guiCreateGridList(3, 29, 170, 368, false, GUIEditor.tab[1])
+guiGridListAddColumn(GUIEditor.gridlist[1], "Nickname", 0.9)
+GUIEditor.label[1] = guiCreateLabel(178, 17, 111, 15, "Player Information", false, GUIEditor.tab[1])
+guiSetFont(GUIEditor.label[1], "default-bold-small")
+GUIEditor.label[2] = guiCreateLabel(183, 39, 219, 15, "Name: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[3] = guiCreateLabel(183, 58, 219, 15, "IP: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[4] = guiCreateLabel(183, 78, 264, 15, "Serial: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[5] = guiCreateLabel(183, 97, 264, 15, "Version: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[6] = guiCreateLabel(183, 118, 264, 15, "Account Name: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[7] = guiCreateLabel(183, 139, 264, 15, "ACL Groups: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[8] = guiCreateLabel(177, 164, 111, 15, "Ingame:", false, GUIEditor.tab[1])
+guiSetFont(GUIEditor.label[8], "default-bold-small")
+GUIEditor.label[9] = guiCreateLabel(183, 183, 95, 15, "Health: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[10] = guiCreateLabel(278, 183, 95, 15, "Armour: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[11] = guiCreateLabel(183, 204, 95, 15, "Model: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[12] = guiCreateLabel(278, 204, 169, 15, "Team: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[13] = guiCreateLabel(183, 225, 128, 15, "Money: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[14] = guiCreateLabel(311, 225, 136, 15, "Bank: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[15] = guiCreateLabel(183, 244, 128, 15, "Ping: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[16] = guiCreateLabel(311, 244, 136, 15, "FPS: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[17] = guiCreateLabel(183, 264, 264, 15, "Area: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[18] = guiCreateLabel(183, 284, 264, 15, "Position: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[19] = guiCreateLabel(183, 304, 95, 15, "Interior:", false, GUIEditor.tab[1])
+GUIEditor.label[20] = guiCreateLabel(278, 304, 95, 15, "Dimension:", false, GUIEditor.tab[1])
+GUIEditor.label[21] = guiCreateLabel(177, 329, 111, 15, "Vehicle:", false, GUIEditor.tab[1])
+guiSetFont(GUIEditor.label[21], "default-bold-small")
+GUIEditor.label[22] = guiCreateLabel(183, 349, 264, 15, "Vehicle: N/A", false, GUIEditor.tab[1])
+GUIEditor.label[23] = guiCreateLabel(183, 369, 264, 15, "Health: N/A", false, GUIEditor.tab[1])
+
+GUIEditor.tab[2] = guiCreateTab("Resources", GUIEditor.tabpanel[1])
+GUIEditor.tab[3] = guiCreateTab("Bans", GUIEditor.tabpanel[1])
+GUIEditor.tab[4] = guiCreateTab("Server", GUIEditor.tabpanel[1])

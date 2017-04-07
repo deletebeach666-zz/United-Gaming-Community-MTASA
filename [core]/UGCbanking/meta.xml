@@ -1,0 +1,14 @@
+<meta>
+	<info author="RipeMangoes69" version="1.0.0" name="UGC Banking System" startup="true" />
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+	<script src="atm/client.luac" type="client" />
+	<script src="atm/server.lua" type="server" />
+	<file src="img/bank.png" />
+	
+	<export function="getPlayerBankBalance" type="server" />
+	<export function="addMoneyToBank" type="server" />
+	<export function="removeMoneyFromBank" type="server" />
+	<export function="giveMoneyByAccount" type="server" />
+	<export function="getAccountBankBalance" type="server" />
+</meta>

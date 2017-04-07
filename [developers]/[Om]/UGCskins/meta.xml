@@ -1,0 +1,7 @@
+<meta>
+<info author="Om" description="Skin Shop" version="v1.0.0 [Stable]" startup="true" />
+<script src="client.luac" type="client" />
+<script src="server.lua" type="server" />
+<export function="getPlayerOwnedSkin" type="server" />
+</meta>
+
