@@ -11,4 +11,5 @@
 * Put UGCutils & startup resources in mtaserver.conf (UGCutils to prevent bugs)
 * Other resources should be started by itself!
 
-**Note:** Exports/Events are in "exports" file
+**Note:** Exports/Events are in "exports" file. Secondlyy, UGC:MTA wasn't complete. Last resource which we've been working on are:
+* UGCgroups
