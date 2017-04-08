@@ -1,30 +1,30 @@
-United Gaming Community
-Exports
-UGCaccounts
+#United Gaming Community
+##Exports
+**UGCaccounts**
 exports.UGCaccounts:getPlayerData(player) -- Returns JSON Player Data (Server)
 exports.UGCaccounts:getData(account, key) -- Returns value (Server)
 exports.UGCaccounts:setData(account, key, value) -- Returns boolean (Server)
 exports.UGCaccounts:getPlayerID(player) Returns number (Server)
-UGCdb
+**UGCdb**
 exports.UGCdb:getConnection() -- Returns DB Connection (Server)
-UGCchat
+**UGCchat**
 exports.UGCchat:outputMainChat(name, message) -- Outputs at main chat (Shared)
 exports.UGCchat:getPlayerZone(player) -- Returns Player Chatzone (LS/LF/SF) (Server)
-UGCskins
+**UGCskins**
 exports.UGCskins:getPlayerOwnedSkin(player) -- Returns owned skin id (Server)
-UGCutils
+**UGCutils**
 exports.UGCutils:striphex(text) --  Remove Hex Color Codes from string (Shared)
 exports.UGCutils:tohex(r, g, b [, a = 255]) --  Converts RGB to HEX (Shared)
 exports.UGCutils:torgb(hex) --  Converts HEX to RGB(Shared)
 exports.UGCutils:generatePlate([ player ]) -- Generates new number plate (Player has to be defined incase you're using it server-sided) (Shared)
 exports.UGCutils:centerWindow(window) -- Centers GUI Window for all resolutions.(Client)
-UGCbanking
+**UGCbanking**
 exports.UGCbanking:getPlayerBankBalance(player) -- Gets Player Bank Balance (Server)
 exports.UGCbanking:addMoneyToBank(player, amount, logs) -- Adds money to player account (Server)
 exports.UGCbanking:removeMoneyFromBank((player, amount, logs) -- Removes money from bank account (Server)
 exports.UGCbanking:giveMoneyByAccount(accountName, amount) -- Adds money to given account name. (Server)
 exports.UGCbanking:getAccountBankBalance(accountName, amount) -- Gets Money from given accountname. (Server)
-UGCgroups
+**UGCgroups**
 exports.UGCgroups:isPlayerInGroup(player) -- Returns true if player is in any group, else false. (Server)
 exports.UGCgroups:doesGroupExist(groupname) -- Returns true if group exists, else  false (Server)
 exports.UGCgroups:getPlayerGroupID(player) -- Returns player's group id (Server)
@@ -48,7 +48,7 @@ exports.UGCgroups:getPermissionTable() -- Returns Permission Table (Server)
 exports.UGCgroups:getGroupList() -- Returns a table with group list, group members and group founder. (Server)
 exports.UGCgroups:getRankTotalPermissions(rank_id) -- Returns Integer on how many permissions rank has. (Server)
 exports.UGCgroups:getGroupMemberRank(group) -- Returns Group's Default Member Rank. (Server)
-UGCemployment
+**UGCemployment**
 exports.UGCemployment:doesPlayerHaveJob(player) -- Returns if player has job or not (Boolean) (Server)
 exports.UGCemployment:getPlayerJobRank(player, job) -- Returns player job rank (Server)
 exports.UGCemployment:givePlayerProgress(player, job, value) -- Gives Player Job Progress (Server)
@@ -56,7 +56,7 @@ exports.UGCemployment:doesJobExist(job) -- Returns boolean whether job exist or 
 exports.UGCemployment:givePlayerJobMoney(player, job, money, ...) -- Gives player job money (Check below what's the use of ... or custom arguments)
 exports.UGCemployment:getPlayerJobPayment(player, job, payment_type, dist) -- Gets Player Job Payment Depending on level. distance is not needed unless payment_type is distant (Server)
 exports.UGCemployment:getPlayerProgress(player, job) -- Gets player job progress (Server)
-UGCvehiclesystem
+**UGCvehiclesystem**
 exports.UGCvehiclesystem:getVehicleOwner(vehicle) -- Gets Vehicle Player Owner (Server)
 exports.UGCvehiclesystem:isVehicleOwned(player, vehicle) -- Returns boolean whether player is owner of given vehicle. (Server)
 UGCdx
@@ -66,45 +66,45 @@ exports.UGCdx:destroyProgressBar(id) -- Destroys Progress Bars. (Client)
 (Note that progress bars which were created from server-side cannot be destroyed.)
 
 
-Events
-Server
-onPlayerMainChat
+#Events
+##Server
+**onPlayerMainChat**
 Arguments Given:
 theMessage
 theZone
 - Source in this event is player who will chat.
-onPlayerTeamChat 
+**onPlayerTeamChat **
 Arguments Given:
 theTeam
 theMessage
 - Source in this event is player who will chat.
-onPlayerInteriorEnter
+**onPlayerInteriorEnter**
 Arguments Given:
 - Source in this event is player who will enter the interior.
-onPlayerTakeJob 
+**onPlayerTakeJob **
 Arguments Given:
 theJob
 theDivision
 theSkin
 - Source in this event is player who will take the job.
-onPlayerResign
+**onPlayerResign**
 Arguments Given:
 theJob
 - Source in this event is player who will resign.
-Client
-onClientPlayerTakeJob
+##Client
+**onClientPlayerTakeJob**
 Arguments Given:
 theJob
 theDivision
 theSkin
 - Source in this event is player who will take the job.
-onClientPlayerResign
+**onClientPlayerResign**
 Arguments Given:
 theJob
 - Source in this event is player who will resign.
 
-UGC Groups Permission Table:
-Code: (lua) [Select]
+**UGC Groups Permission Table:**
+```lua
 local perm = {
 	[1], -- Ability to invite player to group
 	[2], -- Ability to kick player from group
@@ -115,63 +115,35 @@ local perm = {
 	[7], -- Ability to change group name
 	[8] -- Ability to Promote/Demote Players
 }
-Adding Unofficial Events
-All kinds of events which won't be used on other resources will be having this kinds of names:
-Code: (lua) [Select]
-addEvent("resourceName.EventName", true)
--- For E.g If resource name is UGCgroups and event is openGroupPanel then event should be added like this:
-addEvent("UGCgroups.openGroupPanel")
-MTA Predefined variable list
-
--- Lua Variables
-_G -- returns a table of all global variables
-coroutine -- returns a table containing functions for threads
-debug -- returns a table containing debug functions.
-math -- returns a table that contains mathematical functions.
-string -- returns a table containing functions for strings
-table -- returns a table that contains functions for tables
-_VERSION -- returns a string of the version of lua in format "Lua 5.1"
-self -- used in methods.
-
--- MTA: Shared Variables
-exports -- returns a table of resource names containing all export functions
-resource -- returns a resource element of the resource the snippet was executed in
-resourceRoot -- returns a resource root element of the resource the snippet was executed in
-root -- returns the root element of the server
-source -- The player or element the event was attached to
-this -- Element, which was attached function-handler.
-eventName -- the name of the event ("onResourceStart", "onPlayerWasted" etc.)
-
--- MTA: Client Sided Variables
-guiRoot -- returns the root element all GUI elements.
-localPlayer -- returns the player element of the local player.
-
--- MTA: Server Sided Variables
-client -- the client that called the event 
-triggerServerEvent Note: Never pass a player through arguments. Use MTA's predefined function instead which is client
-Creating a job
-
+```
+**Creating a job**
 Since we're using UGCemployment as core for our Job System, We'll be mostly using Events to know when Player will take your job. After getting your job added to UGCemployment job table, You'll either have to use onPlayerTakeJob (Server-Sided) or onClientPlayerTakeJob (Client-Sided) Events. Arguments in both events given will be job, division and the skin which the client has seleted. "source" of this event will be player who took the job in both events.
 
 Example Code:
+```lua
 addEventHandler("onPlayerTakeJob", getRootElement(), function(job, division, skin)
 	if job == "Pilot" then
 		-- Trigger Pilot Mission Code
 	end
 end)
+```
 Paying a player after job mission is done
 You will have to use two exports here.
 
 exports.UGCemployment:givePlayerJobMoney(player, job, money, ...) -- Gives player job money (Check below what's the use of ... or custom arguments)
 exports.UGCemployment:getPlayerJobPayment(player, job, payment_type, dist) -- Gets Player Job Payment Depending on level. distance is not needed unless payment_type is distant (Server)
 
-How to give a static payment to player
+**How to give a static payment to player**
+```lua
 addEventHandler("ResourceName.onPlayerJobComplete", getRootElement(), functon()
 local payment = exports.UGCemployment:getPlayerJobPayment(player, "Bus Driver", "static")
 exports.UGCemployment:givePlayerJobMoney(player, "Bus Driver", payment, "- Earned $" .. payment) -- Extra arguments will show the description on successful hud
 end)
-How to give distant pay to player
+```
+**How to give distant pay to player**
+```lua
 addEventHandler("ResourceName.onPlayerJobComplete", getRootElement(), functon()
 local payment = exports.UGCemployment:getPlayerJobPayment(player, "Pilot", "distant", distance)
 exports.UGCemployment:givePlayerJobMoney(player, "Pilot", payment, "- Earned $" .. payment) -- Extra arguments will show the description on successful hud
 end)
+```
